@@ -15,6 +15,7 @@ const Loading = (): JSX.Element => {
         height: "100vh",
         width: "100vw",
         zIndex: 8,
+        position: "fixed",
       }}
     >
       <LoadingStyled className="loader"></LoadingStyled>
