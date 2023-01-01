@@ -1,51 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+import useTask from "../../hooks/useTask/useTask";
+import { useAppSelector } from "../../redux/hooks";
+import AddInput from "../AddInput/AddInput";
+import Header from "../Header/Header";
+import Loading from "../Loading/Loading";
+import Task from "../Task/Task";
 import "./App.css";
-
 function App() {
+  const { loadAllTasks } = useTask();
+  const loading = useAppSelector((uiActions) => uiActions.uiActions.loading);
+  useEffect(() => {
+    loadAllTasks();
+  }, [loadAllTasks]);
+  const tasksData = useAppSelector(
+    (tasksActions) => tasksActions.tasksActions.toDo
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <>
+      {loading && <Loading />};
+      <div className="App">
+        <Header />
+        <AddInput />
+        {tasksData.map((task, index) => (
+          <Task
+            description={task.description}
+            status={task.status}
+            key={index}
+            id={task.id}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
