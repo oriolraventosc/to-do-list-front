@@ -11,6 +11,7 @@ const Header = (): JSX.Element => {
         justifyContent: "center",
         alignItems: "center",
         mt: "1rem",
+        mb: "1rem",
       }}
     >
       <Typography
@@ -18,10 +19,12 @@ const Header = (): JSX.Element => {
         sx={{
           color: "primary.main",
           fontSize: {
-            lg: 45,
-            md: 45,
-            sm: 45,
-            xs: 40,
+            xxl: "4rem",
+            xl: "4rem",
+            lg: "3rem",
+            md: "2.1rem",
+            sm: "2.5rem",
+            xs: "2.5rem",
           },
           fontWeight: "bold",
         }}

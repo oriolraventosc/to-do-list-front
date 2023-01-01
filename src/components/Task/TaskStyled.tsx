@@ -15,7 +15,7 @@ const TaskStyled = styled(Container)`
     width: calc(100vw - 55rem);
   }
   @media (min-width: 2000px) {
-    width: calc(80vw);
+    width: calc(100vw - 65rem);
   }
   padding-left: 1rem;
   padding-right: 1rem;
@@ -33,6 +33,9 @@ const TaskStyled = styled(Container)`
   }
   .task-not-done {
     text-decoration: none;
+  }
+  .task:last-child {
+    margin-bottom: 0;
   }
 `;
 
