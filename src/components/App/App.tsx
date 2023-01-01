@@ -20,7 +20,6 @@ function App() {
       {loading && <Loading />};
       <div className="App">
         <Header />
-        <AddInput />
         {tasksData.map((task, index) => (
           <Task
             description={task.description}
@@ -29,6 +28,7 @@ function App() {
             id={task.id}
           />
         ))}
+        <AddInput />
       </div>
     </>
   );

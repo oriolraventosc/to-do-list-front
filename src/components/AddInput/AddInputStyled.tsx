@@ -5,6 +5,7 @@ const AddInputStyled = styled(Container)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 70px;
   width: calc(100vw - 4rem);
   @media (min-width: 426px) {
     width: calc(100vw - 10rem);
@@ -30,7 +31,7 @@ const AddInputStyled = styled(Container)`
     color: #f06449;
     border: none;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem;
     border-radius: 0 5px 5px 0;
     margin-top: -0.5rem;
   }

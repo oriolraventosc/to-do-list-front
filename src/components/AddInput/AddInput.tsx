@@ -32,22 +32,23 @@ const AddInput = (): JSX.Element => {
           type="text"
           autoComplete="off"
           placeholder="task description"
+          inputProps={{ style: { fontSize: 20 } }}
           sx={{
-            fontSize: {
-              lg: 25,
-              md: 22,
-              sm: 22,
-              xs: 22,
-            },
             borderRadius: "5px 0 0 5px",
             border: "none",
             mt: "2rem",
             mb: "2.5rem",
           }}
+          size="medium"
           className="input"
           onChange={handleFormChange}
         ></TextField>
-        <Button type="submit" className="button">
+        <Button
+          type="submit"
+          className="button"
+          size="medium"
+          sx={{ fontSize: 15 }}
+        >
           Add
         </Button>
       </AddInputStyled>

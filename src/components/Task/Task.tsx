@@ -28,14 +28,17 @@ const Task = (taskData: TasksProps): JSX.Element => {
         alignItems: "center",
         backgroundColor: "primary.light",
       }}
+      className="task"
     >
       <Typography
         sx={{
           fontSize: {
-            lg: 25,
-            md: 22,
-            sm: 22,
-            xs: 22,
+            xxl: "2.5rem",
+            xl: "2rem",
+            lg: "1.6rem",
+            md: "1.6rem",
+            sm: "1.5rem",
+            xs: "1.5rem",
           },
           color: "primary.contrastText",
         }}
@@ -48,6 +51,16 @@ const Task = (taskData: TasksProps): JSX.Element => {
       <DeleteForeverRoundedIcon
         onClick={() => deleteTask(id)}
         className="delete-icon"
+        sx={{
+          fontSize: {
+            xxl: "2.5rem",
+            xl: "2rem",
+            lg: "1.6rem",
+            md: "1.6rem",
+            sm: "1.5rem",
+            xs: "1.5rem",
+          },
+        }}
       />
     </TaskStyled>
   );

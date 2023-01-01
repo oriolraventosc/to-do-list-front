@@ -6,6 +6,7 @@ import App from "./components/App/App";
 import { ThemeProvider } from "@mui/material";
 import "./index.css";
 import theme from "./styles/Theme";
+import typographyTheme from "./styles/TypographyTheme";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -13,8 +14,10 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <App />
+      <ThemeProvider theme={typographyTheme}>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>
