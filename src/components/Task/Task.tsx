@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
+import CloseIcon from "@mui/icons-material/Close";
 import TaskStyled from "./TaskStyled";
 import useTask from "../../hooks/useTask/useTask";
 import { useState } from "react";
@@ -48,7 +48,7 @@ const Task = (taskData: TasksProps): JSX.Element => {
         {description}
       </Typography>
 
-      <DeleteForeverRoundedIcon
+      <CloseIcon
         onClick={() => deleteTask(id)}
         className="delete-icon"
         sx={{
