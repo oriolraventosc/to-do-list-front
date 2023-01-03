@@ -16,13 +16,15 @@ const AddInput = (): JSX.Element => {
       description: event.target.value,
     });
   };
-  const handleSubmit = async (event: React.SyntheticEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     const formDataToSubmit = {
       description: initialForm.description,
     };
     if (formDataToSubmit.description !== "") {
       await addTask(formDataToSubmit);
+      initialForm.description = "";
+      setData({ ...initialForm });
     }
   };
   return (
@@ -41,6 +43,7 @@ const AddInput = (): JSX.Element => {
           }}
           size="medium"
           className="input"
+          value={initialForm.description}
           onChange={handleFormChange}
         ></TextField>
         <Button
