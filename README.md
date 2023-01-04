@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+# To Do List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+An application used to filter data form Twitter based on user preference, built with React, Redux, JavaScript, and CSS.
+A To Do List application used to add and delete tasks buiilt with React, Reduxt Toolkit, TypeScript, Styled Components, Axios, and Material UI.
 
-## Available Scripts
+## Project Screen Shot(s)
 
-In the project directory, you can run:
+<img src="screenshots/todolist.png" width="350" title="To Do List">
 
-### `npm start`
+## Installation and Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**npm install**
 
-### `npm test`
+### To run test suite:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**npm test**
 
-### `npm run build`
+### To start server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**npm start**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### To visit App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**localhost:3000**
 
-### `npm run eject`
+## Data Layer
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Data:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Task: {
+  description: string,
+  status: boolean
+  }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Components
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### App
 
-## Learn More
+#### Show:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Header component
+- Task component
+- Loading component
+- Add input component
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Header
+
+#### Show:
+
+- A heading level 1 title with the text 'To Do List'
+
+### Task
+
+#### Show:
+
+- Paragraphs with the name of the task
+- 'X' icon to delete the tasks
+
+### Loading
+
+#### Show:
+
+- A container animated
+
+#### Get actions:
+
+- While loading the API content the loading is shown
+
+### Add input
+
+#### Show:
+
+- A textfield input with a placeholder 'task description'
+- A button with the text 'ADD'
