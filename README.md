@@ -1,6 +1,5 @@
 # To Do List App
 
-An application used to filter data form Twitter based on user preference, built with React, Redux, JavaScript, and CSS.
 A To Do List application used to add and delete tasks buiilt with React, Reduxt Toolkit, TypeScript, Styled Components, Axios, and Material UI.
 
 ## Project Screen Shot(s)
